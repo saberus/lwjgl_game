@@ -4,12 +4,19 @@ import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 import org.lwjgl.opengl.GL;
 
+import lwjglProject.game.Window;
+
 import org.lwjgl.glfw.GLFWVidMode;
 
 public class Main {
 
 	public static void main(String[] args) {
-		if(!glfwInit()) {
+		
+		Window window = new Window(600,360,"wind",true);
+		
+		window.init();
+		
+/*		if(!glfwInit()) {
 			throw new IllegalStateException("Failed to initialize GLFW");
 		}
 		
@@ -36,7 +43,7 @@ public class Main {
 		}
 		
 		glfwTerminate();
-
+*/
 	}
 
 }
