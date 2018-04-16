@@ -11,10 +11,13 @@ import org.lwjgl.glfw.GLFWVidMode;
 public class Main {
 
 	public static void main(String[] args) {
-		
+
 		Window window = new Window(600,360,"wind",true);
 		
 		window.init();
+		while (true) {
+			window.update();
+		}
 		
 /*		if(!glfwInit()) {
 			throw new IllegalStateException("Failed to initialize GLFW");
